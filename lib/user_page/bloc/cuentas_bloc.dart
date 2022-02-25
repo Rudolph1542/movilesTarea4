@@ -14,7 +14,7 @@ class CuentasBloc extends Bloc<CuentasEvent, CuentasState> {
     on<CuentasEvent>(Cuentass);
   }
   final String url =
-      "https://api.sheety.co/d89b0f60f5a721cba13b0538b7530c40/dummyApi/cuentas";
+      'https://api.sheety.co/605858022764815db6b56e85137e763f/hc1/hoja1';
 
   void Cuentass(CuentasEvent event, Emitter emitter) async {
     var MapaCuenta = await getCuentass();

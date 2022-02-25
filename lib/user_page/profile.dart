@@ -165,19 +165,19 @@ class _ProfileState extends State<Profile> {
                           child: ListView.builder(
                         itemBuilder: (BuildContext context, int index) {
                           return CuentaItem(
-                            tipoCuenta: state.mapaCuenta['cuentas'][index]
+                            tipoCuenta: state.mapaCuenta['hoja1'][index]
                                     ['cuenta']
                                 .toString(),
-                            terminacion: state.mapaCuenta['cuentas'][index]
+                            terminacion: state.mapaCuenta['hoja1'][index]
                                     ['tarjeta']
                                 .toString()
                                 .substring(5),
-                            saldoDisponible: state.mapaCuenta['cuentas'][index]
+                            saldoDisponible: state.mapaCuenta['hoja1'][index]
                                     ['dinero']
                                 .toString(),
                           );
                         },
-                        itemCount: (state.mapaCuenta["cuentas"] as List).length,
+                        itemCount: (state.mapaCuenta['hoja1'] as List).length,
                       ));
                     } else if (state is CuentasErrorState) {
                       return Text("No hay datos disponibles");
